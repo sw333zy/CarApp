@@ -49,6 +49,6 @@ public class Car extends Vehicle {
 
     //method to display cars entered into array list
     public String displayCars(){
-        return String.format("A %s %s.",this.getMake(),this.getModel());   }
+        return String.format("A %s %s %s.", this.getColor(),this.getMake(),this.getModel());   }
 }
 

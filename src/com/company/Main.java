@@ -66,6 +66,7 @@ public class Main {
         ArrayList<Car> cars = new ArrayList<>();
         //able to continue entering new cars until user enter (n) making this false
         while(true) {
+            //create new car and enter its attributes
             System.out.print("Enter make: ");
             Car c = new Car();
             //use nextLine to ensure buffer is clear
@@ -74,6 +75,9 @@ public class Main {
             System.out.print("Enter model: ");
             String model = keyboard.nextLine();
             c.setModel(model);
+            System.out.print("Enter color: ");
+            String color = keyboard.nextLine();
+            c.setColor(color);
 
             //Add the car to the array list
             cars.add(c);
