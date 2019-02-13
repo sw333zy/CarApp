@@ -12,6 +12,7 @@ public class Vehicle {
 
     }
 
+    //setting and getting car attributes
     public String getMake() {
         return make;
     }

@@ -6,45 +6,52 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        //calling methods
         carClassApp();
         System.out.println();
         carClassApp2();
         System.out.println();
         enterCar();
-
     }
 
+    //method for first task
     public static void carClassApp(){
+        //setting new car instance
         Car a = new Car();
         a.setMake("Porsche");
         a.setModel("Carrera");
         a.setColor("red");
-
+        //calling methods for car actions
         System.out.println(a.startCar());
         System.out.println(a.accelerate());
+        //setting a specific speed for car
         a.setMph(50);
         System.out.println(a.getMph());
         System.out.println(a.stopCar());
 
     }
 
+    //method for second task
     public static void carClassApp2(){
+
+        //new car
         Car a = new Car();
         a.setMake("Porsche");
         a.setModel("Carrera");
         a.setColor("red");
-
+        //new car
         Car b = new Car();
         b.setMake("Volkswagon");
         b.setModel("Jetta");
         b.setColor("blue");
-
+        //calling methods for car actions
         System.out.println(a.startCar());
         System.out.println(b.startCar());
         System.out.println(a.accelerate());
         System.out.println(b.accelerate());
         System.out.println(b.stopCarEmissions());
         System.out.println(b.passEmissions());
+        //setting a specific speed for car
         a.setMph(50);
         System.out.println(a.getMph());
         System.out.println(a.stopCar());
@@ -52,9 +59,12 @@ public class Main {
 
     }
 
+    //user created cars
     public static void enterCar(){
         Scanner keyboard = new Scanner(System.in);
+        //array list to hold newly created cars
         ArrayList<Car> cars = new ArrayList<>();
+        //able to continue entering new cars until user enter (n) making this false
         while(true) {
             System.out.print("Enter make: ");
             Car c = new Car();
@@ -65,10 +75,10 @@ public class Main {
             String model = keyboard.nextLine();
             c.setModel(model);
 
-            //Add the car to the arraylist
+            //Add the car to the array list
             cars.add(c);
 
-            //allow the user to enter another car
+            //allow the user to enter another car or else break loop
             System.out.println("Do you want to enter a new car? (y/n)");
             if (keyboard.nextLine().equalsIgnoreCase("n")){
                 break;

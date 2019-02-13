@@ -5,19 +5,16 @@ public class Car extends Vehicle {
 
     //constructor
     public Car(){
-        super();
         mph = 0;
     }
 
+    //overloaded constructor
     public Car(String color, String make) {
         setColor(color);
         setMake(make);
     }
 
-    // methods that return a string indicating each task the car is performing
-
-
-
+    // methods to indicate car actions
     public String startCar() {
         return "The " + getColor() + " " + getMake() + " " + getModel() + " is starting";
     }
@@ -46,21 +43,12 @@ public class Car extends Vehicle {
         return "The " + getColor() + " " + getMake() + " " + getModel() + " passes its emission test";
     }
 
-//    public String slowDown() {
-//        return "The " + getColor() + getMake() + getModel() + " is breaking";
-//    }
-
-
     public String passCar(Vehicle vehicle, Vehicle vehicle2) {
         return "The " + vehicle.getColor() + " " + vehicle.getMake() + " " + vehicle.getModel() + " just passed the" + " " + vehicle2.getColor() + " " + vehicle2.getMake() + " " + vehicle2.getModel();
     }
 
-//    public String getDescription(){
-//        return "The car you entered is a " + getYear() + " " + getColor() + " " + getMake() + " " + getModel() + " ";
-//
-//    }
-
+    //method to display cars entered into array list
     public String displayCars(){
-        return String.format("An %s %s.",this.getMake(),this.getModel());   }
+        return String.format("A %s %s.",this.getMake(),this.getModel());   }
 }
 
