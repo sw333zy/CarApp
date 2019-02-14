@@ -12,6 +12,8 @@ public class Main {
         carClassApp2();
         System.out.println();
         enterCar();
+        System.out.println();
+        whosDriving();
     }
 
     //method for first task
@@ -96,6 +98,17 @@ public class Main {
         }
 
         System.out.println("End!");
+    }
+    //part of composition exercise
+    public static void whosDriving(){
+        //create new car.....the parameters come from the overloaded constructor which takes 2 arguments
+        Car d = new Car("Black", "Cadillac");
+        //create new driver
+        Driver driver = new Driver();
+        //set his name using person.java and driver.java
+        driver.setName("Ricky Bobby");
+        System.out.println("The " + d.getColor() + " " + d.getMake() + " is being driven by " + driver.getName());
+
     }
 }
 
